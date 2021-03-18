@@ -14,6 +14,8 @@ class Request
 
     protected $secret='';
 
+    protected $passphrase='';
+
     protected $host='';
 
     protected $nonce='';
@@ -30,6 +32,8 @@ class Request
 
     protected $options=[];
 
+    protected $authentication=false;
+
     protected $platform='';
 
     protected $version='';
@@ -38,6 +42,7 @@ class Request
     {
         $this->key=$data['key'] ?? '';
         $this->secret=$data['secret'] ?? '';
+        $this->passphrase=$data['passphrase'] ?? '';
         $this->host=$data['host'] ?? '';
 
         $this->options=$data['options'] ?? [];
@@ -79,6 +84,19 @@ class Request
                 break;
             }
             case 'future':{
+                if($this->authentication==false) return;
+
+                $path=$this->path;
+                if($this->type=='GET' || $this->type=='DELETE'){
+                    $body='';
+                    $path .= empty($this->data) ? '' : '?'.http_build_query($this->data);
+                }else{
+                    $body = empty($this->data) ? '' : json_encode($this->data);
+                }
+
+                $what = $this->nonce . $this->type . $path . $body;
+
+                $this->signature = base64_encode(hash_hmac("sha256", $what, $this->secret, true));
                 break;
             }
         }
@@ -98,6 +116,13 @@ class Request
                 break;
             }
             case 'future':{
+                if($this->authentication==false) return;
+                $this->headers= [
+                    "PF-API-KEY"=>$this->key,
+                    "PF-API-SIGN"=>$this->signature,
+                    'PF-API-TIMESTAMP'=>$this->nonce,
+                    'PF-API-PASSPHRASE'=>$this->passphrase,
+                ];
                 break;
             }
         }
@@ -139,12 +164,15 @@ class Request
                 break;
             }
             case 'future':{
+                if($this->type=='GET' || $this->type=='DELETE') $url.= empty($this->data) ? '' : '?'.http_build_query($this->data);
+                else $this->options['body']=json_encode($this->data);
+
                 break;
             }
         }
 
-        /*echo $url.PHP_EOL;
-        print_r($this->options);*/
+        //echo $url.PHP_EOL;
+        //print_r($this->options);
         //die;
 
         $response = $client->request($this->type, $url, $this->options);

@@ -27,7 +27,7 @@ $poloniex->setOptions([
     //Close the certificate
     //'verify'=>false,
 ]);
-/*
+
 //account
 try {
     $result=$poloniex->privates()->returnBalances();
@@ -59,8 +59,7 @@ try {
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
-*/
-/*
+
 //order
 try {
     $result=$poloniex->privates()->buy([
@@ -73,7 +72,6 @@ try {
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
-
 
 try {
     $result=$poloniex->privates()->cancelOrder([
@@ -93,7 +91,6 @@ try {
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
-*/
 
 try {
     $result=$poloniex->privates()->marginBuy([
