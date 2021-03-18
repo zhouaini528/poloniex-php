@@ -3,10 +3,10 @@
  * @author lin <465382251@qq.com>
  * */
 
-namespace Lin\Polonniex;
+namespace Lin\Poloniex;
 
 use GuzzleHttp\Exception\RequestException;
-use Lin\Coinbene\Exceptions\Exception;
+use Lin\Poloniex\Exceptions\Exception;
 
 class Request
 {
@@ -72,6 +72,10 @@ class Request
     protected function signature(){
         switch ($this->platform){
             case 'spot':{
+                if($this->type=='GET') return;
+                $this->data['nonce']=$this->nonce;
+                $param=http_build_query($this->data, '', '&');
+                $this->signature = hash_hmac("sha512", $param, $this->secret);
                 break;
             }
             case 'future':{
@@ -86,6 +90,11 @@ class Request
     protected function headers(){
         switch ($this->platform){
             case 'spot':{
+                if($this->type=='GET') return;
+                $this->headers= [
+                    "Key"=>$this->key,
+                    "Sign"=>$this->signature,
+                ];
                 break;
             }
             case 'future':{
@@ -120,12 +129,24 @@ class Request
 
         $url=$this->host.$this->path;
 
-        if($this->type=='GET') $url.= empty($this->data) ? '' : '?'.http_build_query($this->data);
-        else $this->options['body']=json_encode($this->data);
+        switch ($this->platform){
+            case 'spot':{
+                if($this->type=='GET') $url.= empty($this->data) ? '' : '&'.http_build_query($this->data);
+                else {
+                    $this->data['nonce']=$this->nonce;
+                    $this->options['form_params']=$this->data;
+                }
+                break;
+            }
+            case 'future':{
+                break;
+            }
+        }
 
         /*echo $url.PHP_EOL;
-        print_r($this->options);
-        die;*/
+        print_r($this->options);*/
+        //die;
+
         $response = $client->request($this->type, $url, $this->options);
 
         return $response->getBody()->getContents();

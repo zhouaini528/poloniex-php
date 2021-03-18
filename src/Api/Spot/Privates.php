@@ -14,7 +14,7 @@ class Privates extends Request
      * */
     public function returnBalances(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnBalances';
         $this->data=$data;
         return $this->exec();
@@ -25,7 +25,7 @@ class Privates extends Request
      * */
     public function returnCompleteBalances(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnCompleteBalances';
         $this->data=$data;
         return $this->exec();
@@ -36,7 +36,7 @@ class Privates extends Request
      * */
     public function returnDepositAddresses(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnDepositAddresses';
         $this->data=$data;
         return $this->exec();
@@ -47,7 +47,7 @@ class Privates extends Request
      * */
     public function generateNewAddress(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='generateNewAddress';
         $this->data=$data;
         return $this->exec();
@@ -58,7 +58,7 @@ class Privates extends Request
      * */
     public function returnDepositsWithdrawals(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnDepositsWithdrawals';
         $this->data=$data;
         return $this->exec();
@@ -69,7 +69,7 @@ class Privates extends Request
      * */
     public function returnOpenOrders(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnOpenOrders';
         $this->data=$data;
         return $this->exec();
@@ -80,7 +80,7 @@ class Privates extends Request
      * */
     public function returnTradeHistory(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnTradeHistory';
         $this->data=$data;
         return $this->exec();
@@ -91,7 +91,7 @@ class Privates extends Request
      * */
     public function returnOrderTrades(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnOrderTrades';
         $this->data=$data;
         return $this->exec();
@@ -102,7 +102,7 @@ class Privates extends Request
      * */
     public function returnOrderStatus(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnOrderStatus';
         $this->data=$data;
         return $this->exec();
@@ -113,7 +113,7 @@ class Privates extends Request
      * */
     public function buy(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='buy';
         $this->data=$data;
         return $this->exec();
@@ -124,7 +124,7 @@ class Privates extends Request
      * */
     public function sell(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='sell';
         $this->data=$data;
         return $this->exec();
@@ -135,7 +135,7 @@ class Privates extends Request
      * */
     public function cancelOrder(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='cancelOrder';
         $this->data=$data;
         return $this->exec();
@@ -146,7 +146,7 @@ class Privates extends Request
      * */
     public function cancelAllOrders(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='cancelAllOrders';
         $this->data=$data;
         return $this->exec();
@@ -157,7 +157,7 @@ class Privates extends Request
      * */
     public function moveOrder(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='moveOrder';
         $this->data=$data;
         return $this->exec();
@@ -168,7 +168,7 @@ class Privates extends Request
      * */
     public function withdraw(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='withdraw';
         $this->data=$data;
         return $this->exec();
@@ -179,7 +179,7 @@ class Privates extends Request
      * */
     public function returnFeeInfo(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnFeeInfo';
         $this->data=$data;
         return $this->exec();
@@ -190,7 +190,7 @@ class Privates extends Request
      * */
     public function returnAvailableAccountBalances(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnAvailableAccountBalances';
         $this->data=$data;
         return $this->exec();
@@ -201,7 +201,7 @@ class Privates extends Request
      * */
     public function returnTradableBalances(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnTradableBalances';
         $this->data=$data;
         return $this->exec();
@@ -212,7 +212,7 @@ class Privates extends Request
      * */
     public function transferBalance(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='transferBalance';
         $this->data=$data;
         return $this->exec();
@@ -223,7 +223,7 @@ class Privates extends Request
      * */
     public function returnMarginAccountSummary(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnMarginAccountSummary';
         $this->data=$data;
         return $this->exec();
@@ -234,7 +234,7 @@ class Privates extends Request
      * */
     public function marginBuy(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='marginBuy';
         $this->data=$data;
         return $this->exec();
@@ -245,7 +245,7 @@ class Privates extends Request
      * */
     public function marginSell(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='marginSell';
         $this->data=$data;
         return $this->exec();
@@ -256,7 +256,7 @@ class Privates extends Request
      * */
     public function getMarginPosition(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='getMarginPosition';
         $this->data=$data;
         return $this->exec();
@@ -267,7 +267,7 @@ class Privates extends Request
      * */
     public function closeMarginPosition(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='closeMarginPosition';
         $this->data=$data;
         return $this->exec();
@@ -278,7 +278,7 @@ class Privates extends Request
      * */
     public function createLoanOffer(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='createLoanOffer';
         $this->data=$data;
         return $this->exec();
@@ -289,7 +289,7 @@ class Privates extends Request
      * */
     public function cancelLoanOffer(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='cancelLoanOffer';
         $this->data=$data;
         return $this->exec();
@@ -300,7 +300,7 @@ class Privates extends Request
      * */
     public function returnOpenLoanOffers(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnOpenLoanOffers';
         $this->data=$data;
         return $this->exec();
@@ -311,7 +311,7 @@ class Privates extends Request
      * */
     public function returnActiveLoans(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnActiveLoans';
         $this->data=$data;
         return $this->exec();
@@ -322,7 +322,7 @@ class Privates extends Request
      * */
     public function returnLendingHistory(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='returnLendingHistory';
         $this->data=$data;
         return $this->exec();
@@ -333,7 +333,7 @@ class Privates extends Request
      * */
     public function toggleAutoRenew(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='toggleAutoRenew';
         $this->data=$data;
         return $this->exec();
@@ -344,7 +344,7 @@ class Privates extends Request
      * */
     public function swapCurrencies(array $data=[]){
         $this->type='POST';
-        $this->path='/tradingAp';
+        $this->path='/tradingApi';
         $data['command']='swapCurrencies';
         $this->data=$data;
         return $this->exec();

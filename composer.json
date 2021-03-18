@@ -1,9 +1,9 @@
 {
-    "name": "linwj/coinbene",
+    "name": "linwj/poloniex",
     "type": "library",
-    "description": "Coinbene API Like the official document interface, Support for arbitrary extension.",
+    "description": "Poloniex API Like the official document interface, Support for arbitrary extension.",
     "license": "MIT",
-    "keywords": ["coinbene","bigone","gate","coinbase","bitmex", "binance", "okex", "huobi","kucoin","kumex"],
+    "keywords": ["poloniex","coinbene","bigone","gate","coinbase","bitmex", "binance", "okex", "huobi","kucoin","kumex"],
     "authors": [
         {
             "name": "linwenjun",
@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Lin\\Coinbene\\": "./src/"
+            "Lin\\Poloniex\\": "./src/"
         }
     },
     "require": {
