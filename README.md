@@ -22,21 +22,21 @@ Most of the interface is now complete, and the user can continue to extend it ba
 
 [Binance](https://github.com/zhouaini528/binance-php) Support [Websocket](https://github.com/zhouaini528/binance-php/blob/master/README.md#Websocket)
 
-[Kucoin/Kumex](https://github.com/zhouaini528/kucoin-php)
+[Kucoin](https://github.com/zhouaini528/kucoin-php)
 
-[Mxc](https://github.com/zhouaini528/mxc-php)
+[Mxc](https://github.com/zhouaini528/Mxc-php)
 
 [Coinbase](https://github.com/zhouaini528/coinbase-php)
 
 [ZB](https://github.com/zhouaini528/zb-php)
 
-[Bitfinex](https://github.com/zhouaini528/zb-php)
+[Bitfinex](https://github.com/zhouaini528/bitfinex-php)
 
 [Bittrex](https://github.com/zhouaini528/bittrex-php)
 
 [Kraken](https://github.com/zhouaini528/kraken-php)
 
-[Gate](https://github.com/zhouaini528/gate-php)   Support V2/V4
+[Gate](https://github.com/zhouaini528/gate-php)   
 
 [Bigone](https://github.com/zhouaini528/bigone-php)   
 
@@ -44,9 +44,9 @@ Most of the interface is now complete, and the user can continue to extend it ba
 
 [Bybit](https://github.com/zhouaini528/bybit-php)  
 
-[Coinbene](https://github.com/zhouaini528/coinbene-php)   Support V3 
+[Coinbene](https://github.com/zhouaini528/coinbene-php)   
 
-[Bitget](https://github.com/zhouaini528/bitget-php)   Support SwapV3 SpotV1 
+[Bitget](https://github.com/zhouaini528/bitget-php)   
 
 [Poloniex](https://github.com/zhouaini528/poloniex-php)
 
